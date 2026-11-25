@@ -4,13 +4,13 @@ Repository for building an interactive web mapping application using HTML, CSS, 
 ## Repository Structure
     .
     ├── data/
-    │   ├── your_point_layer.geojson
-    │   ├── your_line_layer.geojson
-    │   └── your_polygon_layer.geojson
+    │   ├── Douglas_County_Boundary.geojson
+    │   ├── Hospitals.geojson
+    │   └── Park_&_Recreation.geojson
     ├── js/
-    │   └── your_js_file.js
+    │   └── map.js
     ├── css/
-    │   └── your_css_file.css
+    │   └── styles.css
     ├── index.html
     ├── package.json
     ├── package-lock.json
@@ -18,8 +18,6 @@ Repository for building an interactive web mapping application using HTML, CSS, 
     └── README.md
 
 ## Notes
-- Replace the placeholder filenames in `data/`, `js/`, and `css/` with your own files.
-- All GeoJSON datasets must be in WGS84 (EPSG:4326) and placed in the `data/` folder.
 - Run `npm install` to install dependencies and `npm start` to launch the local development server.
 - Open `http://localhost:8080` in your browser to preview your map during development.
 - The final web map is published using GitHub Pages.
