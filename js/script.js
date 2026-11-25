@@ -42,16 +42,16 @@ const polygonLayer = L.layerGroup().addTo(map);
 
 // UI control to toggle layers
 L.control.layers(null, {
-    "Roads": lineLayer,
-    "Traffic Signals": pointLayer,
+    "Douglas County Boundary": lineLayer,
+    "Hospitals": pointLayer,
     "Parks": polygonLayer
 }).addTo(map);
 
 
 // ============================================
-// Step 5: Load point data (Traffic Signals)
+// Step 5: Load point data (Hospitals)
 // ============================================
-fetch('data/Traffic_Signals.geojson')
+fetch('data/Hospitals.geojson')
     .then(res => res.json())
     .then(data => {L.geoSON(data, {
 
@@ -68,22 +68,22 @@ fetch('data/Traffic_Signals.geojson')
     
     // Add popups
     onEachFeature: function(feature, layer) {
-        const name = feature.properties.name || "Traffic Signal";
+        const name = feature.properties.name || "Hospitals";
         layer.bindPopup(`<strong>${name}</strong>`);
         }
 
     }).addTo(pointLayer);
 
   })
-  .catch(err => console.error('Error loading traffic signals:', err));
+  .catch(err => console.error('Error loading hospitals:', err));
 
 
 // ============================================
-// Step 6: Load line data (Roads & Centerlines)
+// Step 6: Load line data (Douglas County Boundary)
 // ============================================
 
 
-fetch('data/Roads_Centerlines.geojson')
+fetch('data/Douglas_County_Boundary.geojson')
   .then(res => res.json())
   .then(data => {L.geoJSON(data, {
 
@@ -97,7 +97,7 @@ fetch('data/Roads_Centerlines.geojson')
     }).addTo(lineLayer);
 
   })
-  .catch(err => console.error('Error loading roads and centerlines:', err));
+  .catch(err => console.error('Error loading Douglas County boundary:', err));
 
 
 // ============================================
