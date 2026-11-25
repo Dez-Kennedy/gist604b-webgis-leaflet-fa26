@@ -7,7 +7,7 @@
 
 // Create a Leaflet map in the "map" div
 // setView([lat, lon], zoom)
-const map = L.map('map').setView([41.257, -95.99], 13);
+const map = L.map('map').setView([41.295, -96.153], 13);
 
 
 // ============================================
