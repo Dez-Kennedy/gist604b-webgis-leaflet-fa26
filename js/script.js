@@ -7,7 +7,7 @@
 
 // Create a Leaflet map in the "map" div
 // setView([lat, lon], zoom)
-const map = L.map('map').setView([41.295, -96.153], 13);
+const map = L.map('map').setView([41.2953, -96.153], 12)
 
 
 // ============================================
@@ -53,7 +53,7 @@ L.control.layers(null, {
 // ============================================
 fetch('data/Hospitals.geojson')
     .then(res => res.json())
-    .then(data => {L.geoSON(data, {
+    .then(data => {L.geoJSON(data, {
 
         // Style points as circle markers
         pointToLayer: function(feature, latlng) {
