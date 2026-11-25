@@ -7,7 +7,7 @@
 
 // Create a Leaflet map in the "map" div
 // setView([lat, lon], zoom)
-const map = L.map('map').setView([41.2953, -96.153], 12)
+const map = L.map('map').setView([41.2623, -96.0759], 12;
 
 
 // ============================================
@@ -90,7 +90,7 @@ fetch('data/Douglas_County_Boundary.geojson')
       // Style lines
       style: function(feature) {
         return {
-          color: '#28312e',
+          color: '#464747',
           weight: 3
         };
       },
